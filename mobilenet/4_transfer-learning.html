@@ -1,13 +1,67 @@
+<style>
+    video {
+        border-radius: 50px;
+        width: 100%;
+    }
+
+    h1 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        border: 1px solid black;
+        padding: 20px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.45);
+        text-transform: uppercase;
+        font-size: 30px;
+    }
+
+    .heading {
+        width: 100%;
+        position: absolute;
+        position: absolute;
+        text-align: center;
+        bottom: 40px;  
+    }
+    .container{
+        position: relative;
+        width: 90%;
+        text-align: center;
+    }
+    .train-input{
+        margin-top: 20px;
+        text-align: center;
+    }
+    .train-input input{
+        width: 90%;
+        padding: 10px;
+        border-radius: 8px; 
+    }
+    .train-input button{
+        background-color: black;
+        color: #fff;
+        width: auto;
+        padding: 10px;
+        text-transform: uppercase;  
+        border-radius: 8px;
+        margin-top: 20px;
+        font-size: 20px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+</style>
+
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.7"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@0.2.2"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
 
-<video autoplay playsinline muted id="webcam" width="640" height="480"></video>
-<h1 id="description"></h1>
+<div class="container">
+    <video autoplay playsinline muted width="640" height="480" id="webcam"></video>
+    <div class="heading">
+        <h1 id="description"></h1>
+    </div>
+</div>
 
-<div>
-    <input id="label" type="text">
+<div class="train-input">
+    <input id="label" placeholder="Type name of object" type="text"> <br>
     <button id="train">Train</button>
 </div>
 
